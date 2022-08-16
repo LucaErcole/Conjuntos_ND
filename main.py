@@ -18,7 +18,7 @@ while contador > 0:
     slinha.append(ord(b[0]))
 
     #If para a operação da união
-    if slinha == [85] or [117]:
+    if slinha == [85]:
 
         #lendo as linhas com numeros e transformando em lista
         tlinha = text.readline()
@@ -40,18 +40,10 @@ while contador > 0:
         contador = contador - 1
 
         #Print da operação
-        print("União:", end="")
-        print("Conjunto1:", end="")
-        print(lista1, end="")
-        print(",", end="")
-        print("Conjunto2:", end="")
-        print(lista2, end="")
-        print(".", end="")
-        print("Resultado:", end="")
-        print(lista3)
+        print("União: Conjunto 1:", lista1,"conjunto 2:", lista2,"resultado:", lista3)
 
     #If para a operação da Interseção
-    elif slinha == [73] or [105]:
+    elif slinha == [73]:
         tlinha = text.readline()
         tlinha = tlinha.rstrip('\n')
         lista1 = tlinha.split(", ")
@@ -65,20 +57,13 @@ while contador > 0:
         for i in lista1:
             if i in lista2:
                 lista3.append(i)
+                
         contador = contador - 1
 
-        print("Interseção:", end="")
-        print("Conjunto1:", end="")
-        print(lista1, end="")
-        print(",", end="")
-        print("Conjunto2:", end="")
-        print(lista2, end="")
-        print(".", end="")
-        print("Resultado:", end="")
-        print(lista3)
+        print("Interseção: Conjunto 1:", lista1,"conjunto 2:", lista2,"resultado:", lista3)
 
     #If para a operação da Diferença
-    elif slinha == [68] or [100]:
+    elif slinha == [68]:
         tlinha = text.readline()
         tlinha = tlinha.rstrip('\n')
         lista1 = tlinha.split(", ")
@@ -92,23 +77,16 @@ while contador > 0:
         for i in lista1:
             if i not in lista2:
                 lista3.append(i)
-        for i in lista1:
-            if i not in lista2:
+        for i in lista2:
+            if i not in lista1:
                 lista3.append(i)
+                
         contador = contador - 1
 
-        print("Diferença:", end="")
-        print("Conjunto1:", end="")
-        print(lista1, end="")
-        print(",", end="")
-        print("Conjunto2:", end="")
-        print(lista2, end="")
-        print(".", end="")
-        print("Resultado:", end="")
-        print(lista3)
+        print("Diferença: Conjunto 1:", lista1,"conjunto 2:", lista2,"resultado:", lista3)
 
    #If para a operação do plano cartesiano
-    elif slinha == [67] or [99]:
+    elif slinha == [67]:
         tlinha = text.readline()
         tlinha = tlinha.rstrip('\n')
         lista1 = tlinha.split(", ")
@@ -122,17 +100,10 @@ while contador > 0:
         for i in lista1:
             for l in lista2:
                 lista3.append((i, l))
+                
         contador = contador - 1
 
-        print("Produto Cartesiano:", end="")
-        print("Conjunto1:", end="")
-        print(lista1, end="")
-        print(",", end="")
-        print("Conjunto2:", end="")
-        print(lista2, end="")
-        print(".", end="")
-        print("Resultado:", end="")
-        print(lista3)
+        print("Produto Cartesiano: Conjunto 1:", lista1,"conjunto 2:", lista2,"resultado:", lista3)
     
   
   
